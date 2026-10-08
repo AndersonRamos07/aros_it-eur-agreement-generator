@@ -1,106 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content="Anderson Ramos"/>
-    <meta name="description" content="A landpage to TimTonik's breaktime w/board"/>
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200px" height="200px"></svg>
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!doctype html>
+<html lang="pt-BR">
 
-    <title>timtonik - breaktime</title>
-    <script src="break.js" defer></script>
-    <script src="modal.js" defer></script>
-    <link rel="StyleSheet" href="./public/css/modal.css"/>
-    <link rel="StyleSheet" href="./public/css/style.css"/>
-    <link rel="StyleSheet" href="./public/css/convention.css"/>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gerador de Termo de Equipamentos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav id="menulateral">
-        <span id="settings">&#9881</span>
-        <div id="submenu">
-            <a href="#" class="settings all" id="all" title="Mude as Informacoes">SET ALL INFO</a>
-            <a href="#" class="settings hour" title="Altere a hora">SET THE HOUR</a>
-            <a href="#" class="settings info" title="Adicione uma informacao">SET THE INFORMATION</a>
-            <label title="Remover as images?">REMOVE IMAGES? <input id="imgs" type="checkbox"></label>
-            <a href="/board.html" title="Pagina do board">BOARD</a>
-            <div class="chess">
-                <a href="https://lichess.org/@/timtonic"
-                title="Pagina principal">&#9812</a>
-                <a href="https://lichess.org/@/timtonic"
-                target="_blank"
-                title="Pagina principal - Profile">&#9814</a>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <h1>
-            <span>&#9749</span>
-            BREAK-TIME</h1>
-        <h2>We'll be back at
-            <strong>7:50pm</strong>
-        </h2>
-        <h3>
-            <span class="icon">&#9201</span>
-            Only <strong>10 minutes</strong> left
-        </h3>
-    </main>
-    <footer>
-        <div id="footer">
-            <section class="images" id="abc">
-                <img src="./imgs/avatar.svg" alt="avatar">        
+    <main class="wrap">
+        <header>
+            <h1>Termo de Entrega de Equipamentos</h1>
+            <p>Funciona abrindo o arquivo diretamente no Edge/Chrome. Não usa Node.js.</p>
+        </header>
+        <form id="contractForm">
+            <section>
+                <h2>Chamado</h2>
+                <div class="grid"><label>Número do incidente<input name="Num_incident" required
+                            placeholder="I2610-3351"></label></div>
             </section>
             <section>
-                <article>
-                    <header>
-                        <span class="icon">&#128172</span>
-                        <strong id="titleInfo"
-                            title="Title of information">
-                                INFORMATION
-                        </strong>
-                    </header>
-                    <p id="textInfo"
-                        title="Any relevant information">
-                            Some information or advice
-                    </p>
-                </article>
+                <h2>Equipamento</h2>
+                <div class="grid">
+                    <label>Marca<input name="Equip_marca" required></label><label>Modelo<input name="Equip_modelo"
+                            required></label>
+                    <label>Número de série<input name="Equip_serial" required></label><label>Hostname<input
+                            name="Equip_hostname" required></label>
+                    <label>Patrimônio<input name="Equip_patrimonio" required></label>
+                </div>
             </section>
-            <section class="images" id="def">
-                <span>&#129496</span>
+            <section>
+                <h2>Colaborador</h2>
+                <div class="grid">
+                    <label>Nome<input name="Colab_nome" required></label><label>Cargo<input name="Colab_cargo"
+                            required></label>
+                    <label>Área<input name="Colab_area" required></label><label>Local/Unidade<input name="Colab_local"
+                            required></label>
+                    <label>Centro de custo<input name="Colab_custo" required></label><label>Gestor<input
+                            name="Colab_gestor" required></label>
+                    <label>E-mail<input type="email" name="Colab_email" required></label>
+                </div>
             </section>
-        </div>
-    </footer>
-    <div class="modal">
-        <form action="#" method="#">
-            <fieldset id="formHour">
-                <legend>Hour's Settings</legend>
-                <label title="Hour">
-                    Select hour:
-                    <input type="time" name="hour">
-                </label>
-                <label title="Hour">
-                    From now:
-                    <input type="checkbox" name="hour">
-                </label>
-                <button type="submit">Select</button>
-            </fieldset>
-            <fieldset id="formInfo">
-                <legend>Info's Settings</legend>
-                <label title="Information's title">
-                    Title:
-                    <input type="text" name="infoTitle">
-                </label>
-                <label title="Information's text">
-                    Information:
-                    <textarea
-                        id="infoText"
-                        name="infoText"
-                        rows="5" cols="40">
-                    </textarea>
-                </label>
-            </fieldset>
+            <section>
+                <h2>Assinatura</h2>
+                <div class="grid"><label>Data<input type="date" name="Ass_data" required></label></div>
+            </section>
+            <div class="actions"><button type="submit">Registrar e gerar contrato</button><button type="button"
+                    class="secondary" id="exportLog">Exportar histórico CSV</button><button type="button" class="light"
+                    id="clearLog">Limpar histórico</button></div>
+            <div id="status" class="status"></div>
         </form>
-    </div>
+        <section>
+            <h2>Histórico deste navegador</h2>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Data/hora</th>
+                            <th>Incidente</th>
+                            <th>Colaborador</th>
+                            <th>Hostname</th>
+                            <th>Patrimônio</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts clássicos de propósito: funcionam em file:// sem servidor local. -->
+    <script src="js/storage.js"></script>
+    <script src="js/contract.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

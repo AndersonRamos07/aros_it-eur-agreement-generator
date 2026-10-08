@@ -1,0 +1,5 @@
+SEM NODE.JS E SEM SERVIDOR
+
+LOG
+Os registros ficam no localStorage do navegador e aparecem na própria página.
+Use "Exportar histórico CSV" para gerar o arquivo historico_termos.csv.
