@@ -74,7 +74,7 @@
       '.employee-title{font-weight:bold;text-align:center;margin:3mm 0 2mm}' +
       '.signature-intro{margin-top:6mm}.date-line{text-align:center;margin-top:5mm}' +
       '.sig{margin:13mm auto 0;width:72%;border-top:1px solid #000;text-align:center;padding-top:1.5mm;font-weight:bold}' +
-      '.page-no{position:fixed;right:15mm;bottom:7mm;font-size:8pt}' +
+      '.page-no{position:fixed;right:15mm;bottom:3mm;font-size:8pt}' +
       '@media print{.no-print{display:none!important}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}' +
       '</style></head><body>' +
       '<div class="page"><div class="header"><div class="logo">VIVEO</div></div>' +
