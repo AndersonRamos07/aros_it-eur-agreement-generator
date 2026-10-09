@@ -77,7 +77,7 @@
       '.page-no{position:fixed;right:15mm;top:7mm;font-size:8pt}' +
       '@media print{.no-print{display:none!important}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}' +
       '</style></head><body>' +
-      '<div class="page-no">1/2</div><div class="page"><div class="header"><div class="logo">VIVEO</div></div>' +
+      '<div class="page"><div class="header"><div class="logo">VIVEO</div></div>' +
       '<div class="title">TERMO DE RESPONSABILIDADE DE USO DE EQUIPAMENTOS DE TI</div>' +
       '<div class="title"><h1 class="incident"> Nº ' + numero +'</h1>'+
       '<p>A CM Hospitalar SA, natureza jurídica, inscrita no CNPJ/MF sob o nº 12.420.164/0001-57, situada na AV. Luiz Maggioni, n° 2727, Bairro Distrito Empresarial, CEP:14072-055, no Município de Ribeirão Preto, Estado de SP, doravante denominada <b>EMPRESA</b>, entrega neste ato ao seu <b>FUNCIONÁRIO</b> os equipamentos abaixo descritos sob as seguintes condições:</p>' +
@@ -99,7 +99,7 @@
       '<li>O <b>FUNCIONÁRIO</b> declara e concorda que o equipamento foi previamente testado em sua presença e que o recebe em perfeitas condições de funcionamento e conservação;</li>' +
       '<li>O <b>FUNCIONÁRIO</b> é responsável pela guarda, conservação e bom uso dos equipamentos e que seguirá as orientações constantes nos manuais de utilização dos fabricantes;</li>' +
       '<li>Em razão do quanto previsto no artigo 462, §1º da CLT - Consolidação das Leis do Trabalho, a <b>EMPRESA</b> está autorizada a descontar diretamente de seu salário os valores necessários para reparação/indenização dos danos causados no equipamento.</li></ul>' +
-      '</br>'+
+      '<div class="page-no">1/2</div></br>'+
       '<div class="equip-title">DESCRIÇÃO DO EQUIPAMENTO</div>' +
       '<div class="line"><span class="field">Tipo de Equipamento:</span> ' + tipo + '</div>' +
       '<div class="line"><span class="field">Marca:</span> ' + marca + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field">Modelo:</span> ' + modelo + '</div>' +
@@ -117,7 +117,8 @@
       '<div class="line"><span class="field">USUÁRIO:</span> ' + usuario + '</div>' +
       '<p class="signature-intro">Por ser verdade, assino o presente <b>TERMO DE RESPONSABILIDADE DE USO DE EQUIPAMENTOS</b></p>' +
       '<div class="date-line">São Paulo, ' + dia + ' de ' + mes + ' de ' + ano + '</div>' +
-      '<div class="sig">(Assinatura do Funcionário)</div></div></body></html>';
+      '<div class="sig">(Assinatura do Funcionário)</div></div>'+
+      '<div class="page-no">2/2</div></br></body></html>';
   }
 
   function openContract(f, reg, autoPrint) {
