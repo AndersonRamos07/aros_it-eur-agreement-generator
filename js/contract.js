@@ -62,7 +62,7 @@
     return '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">' +
       '<title>TERMO DE RESPONSABILIDADE - ' + nome + '</title>' +
       '<style>' +
-      '@page{size:A4;margin:14mm 15mm 14mm 15mm}' +
+      '@page{size:A4;margin:14mm 15mm 20mm 15mm}' +
       '*{box-sizing:border-box}' +
       'html,body{margin:0;padding:0;background:#fff;color:#000}' +
       'body{font-family:Arial,Helvetica,sans-serif;font-size:9.5pt;line-height:1.22}' +
@@ -99,6 +99,7 @@
       '<li>O <b>FUNCIONÁRIO</b> declara e concorda que o equipamento foi previamente testado em sua presença e que o recebe em perfeitas condições de funcionamento e conservação;</li>' +
       '<li>O <b>FUNCIONÁRIO</b> é responsável pela guarda, conservação e bom uso dos equipamentos e que seguirá as orientações constantes nos manuais de utilização dos fabricantes;</li>' +
       '<li>Em razão do quanto previsto no artigo 462, §1º da CLT - Consolidação das Leis do Trabalho, a <b>EMPRESA</b> está autorizada a descontar diretamente de seu salário os valores necessários para reparação/indenização dos danos causados no equipamento.</li></ul>' +
+      '</br>'+
       '<div class="equip-title">DESCRIÇÃO DO EQUIPAMENTO</div>' +
       '<div class="line"><span class="field">Tipo de Equipamento:</span> ' + tipo + '</div>' +
       '<div class="line"><span class="field">Marca:</span> ' + marca + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field">Modelo:</span> ' + modelo + '</div>' +
