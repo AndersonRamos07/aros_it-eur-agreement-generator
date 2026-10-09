@@ -79,7 +79,7 @@
       '</style></head><body>' +
       '<div class="page-no">1/2</div><div class="page"><div class="header"><div class="logo">VIVEO</div></div>' +
       '<div class="title">TERMO DE RESPONSABILIDADE DE USO DE EQUIPAMENTOS DE TI</div>' +
-      '<div class="title incident"><h1> Nº ' + numero +'</h1>'+
+      '<div class="title"><h1 class="incident"> Nº ' + numero +'</h1>'+
       '<p>A CM Hospitalar SA, natureza jurídica, inscrita no CNPJ/MF sob o nº 12.420.164/0001-57, situada na AV. Luiz Maggioni, n° 2727, Bairro Distrito Empresarial, CEP:14072-055, no Município de Ribeirão Preto, Estado de SP, doravante denominada <b>EMPRESA</b>, entrega neste ato ao seu <b>FUNCIONÁRIO</b> os equipamentos abaixo descritos sob as seguintes condições:</p>' +
       '<div class="section">Do Compromisso, cuidados e manuseio dos equipamentos:</div>' +
       '<p>O <b>FUNCIONÁRIO</b> deverá:</p><ul>' +
