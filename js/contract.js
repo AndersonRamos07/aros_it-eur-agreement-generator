@@ -67,7 +67,7 @@
       'html,body{margin:0;padding:0;background:#fff;color:#000}' +
       'body{font-family:Arial,Helvetica,sans-serif;font-size:9.5pt;line-height:1.22}' +
       '.page{width:100%}.header{height:23mm;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #ddd;margin-bottom:5mm}' +
-      '.logo{font-weight:bold;font-size:20pt;letter-spacing:-1px;color:#5f6871}.title{text-align:center;font-weight:bold;font-size:10pt;margin:0 0 5mm}' +
+      '.logo{font-weight:bold;font-size:20pt;letter-spacing:-1px;color:#5f6871}.title{text-align:center;font-weight:bold;font-size:10pt;margin:0 0 5mm}.incident{font-weight:bold;color:red}' +
       'p{margin:0 0 3.2mm;text-align:justify}.section{font-weight:bold;margin:3.5mm 0 2mm}' +
       'ul{margin:0 0 3mm 5mm;padding-left:4mm}li{margin:0 0 1.7mm;text-align:justify}' +
       '.equip-title{font-weight:bold;text-align:center;margin:3mm 0 2mm}' +
@@ -79,7 +79,7 @@
       '</style></head><body>' +
       '<div class="page-no">1/2</div><div class="page"><div class="header"><div class="logo">VIVEO</div></div>' +
       '<div class="title">TERMO DE RESPONSABILIDADE DE USO DE EQUIPAMENTOS DE TI</div>' +
-      '<div class="title"> Nº ' + numero +
+      '<div class="title incident"><h1> Nº ' + numero +'</h1>'+
       '<p>A CM Hospitalar SA, natureza jurídica, inscrita no CNPJ/MF sob o nº 12.420.164/0001-57, situada na AV. Luiz Maggioni, n° 2727, Bairro Distrito Empresarial, CEP:14072-055, no Município de Ribeirão Preto, Estado de SP, doravante denominada <b>EMPRESA</b>, entrega neste ato ao seu <b>FUNCIONÁRIO</b> os equipamentos abaixo descritos sob as seguintes condições:</p>' +
       '<div class="section">Do Compromisso, cuidados e manuseio dos equipamentos:</div>' +
       '<p>O <b>FUNCIONÁRIO</b> deverá:</p><ul>' +
